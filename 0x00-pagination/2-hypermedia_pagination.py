@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """
 Adds `get_hyper` method to `Server` class
@@ -43,7 +42,7 @@ class Server:
             (List[List]): a list of list(row) if inputs are within range
             ([]) : an empty list if page and page_size are out of range
         """
-        assert type(page) == int and type(page_size) == int
+        assert isinstance(page, int) and isinstance(page_size, int)
         assert page > 0 and page_size > 0
         startIndex, endIndex = self.index_range(page, page_size)
         return self.dataset()[startIndex:endIndex]
