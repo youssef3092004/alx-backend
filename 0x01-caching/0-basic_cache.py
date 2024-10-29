@@ -4,8 +4,8 @@ from base_caching import BaseCaching
 class BasicCache(BaseCaching):
     """
     BasicCache class that inherits from BaseCaching.
-
-    This class is a basic implementation of a caching system where items can be added
+    This class is a basic implementation of a caching
+    system where items can be added
     to the cache and retrieved from the cache.
     """
 
