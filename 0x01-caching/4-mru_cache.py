@@ -2,7 +2,6 @@
 ''' MRU Cache '''
 from base_caching import BaseCaching
 
-
 class MRUCache(BaseCaching):
     ''' MRU Cache class '''
 
@@ -18,10 +17,10 @@ class MRUCache(BaseCaching):
             if key in self.order:
                 self.order.remove(key)
             self.order.append(key)
-            if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
-                least_recently_used = self.order.pop(-2)
-                print(f"DISCARD: {least_recently_used}")
-                del self.cache_data[least_recently_used]
+            if len(self.cache_data) > BaseCaching.MAX_ITEMS:
+                most_recently_used = self.order.pop()
+                print(f"DISCARD: {most_recently_used}")
+                del self.cache_data[most_recently_used]
 
     def get(self, key):
         ''' Get an item by key '''
