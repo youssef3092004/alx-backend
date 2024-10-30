@@ -1,5 +1,6 @@
+#!/usr/bin/python3
+"""LRU Cache implementation class"""
 from base_caching import BaseCaching
-
 
 class LRUCache(BaseCaching):
     """
