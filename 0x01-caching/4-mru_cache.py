@@ -18,7 +18,7 @@ class MRUCache(BaseCaching):
                 self.order.remove(key)
             self.order.append(key)
             if len(self.cache_data) > BaseCaching.MAX_ITEMS:
-                most_recently_used = self.order.pop()
+                most_recently_used = self.order.pop()  # Remove the last item
                 print(f"DISCARD: {most_recently_used}")
                 del self.cache_data[most_recently_used]
 
