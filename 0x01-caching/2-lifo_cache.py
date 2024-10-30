@@ -8,8 +8,10 @@ class LIFOCache(BaseCaching):
     """
     LIFOCache class that inherits from BaseCaching.
 
-    This caching system follows the Last-In-First-Out (LIFO) replacement policy,
-    where the most recently added item is the first to be discarded when the cache
+    This caching system follows the
+    Last-In-First-Out (LIFO) replacement policy,
+    where the most recently added item is
+    the first to be discarded when the cache
     reaches its maximum capacity.
     """
 
@@ -23,7 +25,8 @@ class LIFOCache(BaseCaching):
 
     def put(self, key, item):
         """
-        Add an item to the cache, applying LIFO replacement if cache exceeds capacity.
+        Add an item to the cache, applying LIFO replacement
+        if cache exceeds capacity.
 
         If the cache size exceeds `MAX_ITEMS`, the last recently added item
         before the new one is discarded following the LIFO policy.
