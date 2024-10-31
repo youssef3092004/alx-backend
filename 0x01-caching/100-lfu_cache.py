@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 from base_caching import BaseCaching
 
+
 class LFUCache(BaseCaching):
     """ LFU cache class """
 
